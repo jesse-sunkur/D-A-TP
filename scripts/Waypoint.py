@@ -47,7 +47,6 @@ if __name__=="__main__":
     desired_z2 = 0
 
     rospy.Subscriber("waypoint_control_service", Twist, service)
-    #rospy.Subscriber("waypoint_control_service", Twist, service1)
 
     #Initial Drone Position and Heading
     pose_x = 0
@@ -76,13 +75,6 @@ if __name__=="__main__":
     flag = 0
 
     while not rospy.is_shutdown():
-        #desired_x1 = 50
-        #desired_y1 = 50
-        #desired_z1 = 50
-        #desired_x2 = 0
-        #desired_y2 = 0
-        #desired_z2 = 0
-
         error_x1 = (desired_x1 - pose_x)
         error_x2 = (desired_x2 - pose_x)
         error_y1 = (desired_y1 - pose_y)
@@ -90,7 +82,7 @@ if __name__=="__main__":
         error_z1 = (desired_z1 - pose_z)
         error_z2 = (desired_z2 - pose_z)
 
-	print("x1", round(error_x1, 2), "y1", round(error_y1, 2), "z1", round(error_z1, 2), "x2", round(error_x2, 2), "y2", round(error_y2, 2), flag)
+	#print("x1", round(error_x1, 2), "y1", round(error_y1, 2), "z1", round(error_z1, 2), "x2", round(error_x2, 2), "y2", round(error_y2, 2), flag)
 
 
         if flag == 0 or flag == 1:
