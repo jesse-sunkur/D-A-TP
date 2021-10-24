@@ -34,7 +34,7 @@ if __name__=="__main__":
     rospy.init_node("altitude_control",anonymous=True)
 
     #Desired Drone Waypoints
-    desired_z = 0
+    desired_z = 30
 
     rospy.Subscriber("altitude_control_service", Twist, service)
 
